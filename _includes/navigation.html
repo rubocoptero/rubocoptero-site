@@ -1,0 +1,29 @@
+{% if site.data.navigation %}
+  <header class="header-219">
+    <div class="container">
+      <div class="row">
+        <div class="navbar col-sm-12" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle"></button>
+            <a class="brand" href="#">Rubocoptero</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav">
+              {%- for link in site.data.navigation -%}
+                {%- if link.url contains '://' -%}
+                  {%- assign url = link.url -%}
+                {%- else -%}
+                  {%- assign url = link.url | relative_url -%}
+                {%- endif -%}
+                <li><a href="{{ url }}">{{ link.title }}</a></li>
+              {%- endfor -%}
+            </ul>
+            <form class="navbar-form pull-right">
+              <a class="btn btn-default" href="#">APRENDE TDD</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header><!-- /.header-219 -->
+{% endif %}
