@@ -4,4 +4,5 @@
 
 layout: home
 permalink: /blog/
+published: false
 ---
