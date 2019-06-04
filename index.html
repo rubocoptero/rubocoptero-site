@@ -1,187 +1,455 @@
----
-# this is an empty front matter to allow includes
----
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>rubocoptero</title>
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="shortcut icon" href="./landing/vendor/flat-ui/images/favicon.ico">
-        <link rel="stylesheet" href="./landing/vendor/flat-ui/bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="./landing/vendor/flat-ui/css/flat-ui.css">
-        <!-- Using only with Flat-UI (free)-->
-        <link rel="stylesheet" href="./landing/vendor/common-files/css/icon-font.css">
-        <!-- end -->
-        <link rel="stylesheet" href="./landing/vendor/common-files/css/animations.css">
-        <link rel="stylesheet" href="./landing/css/style.css">
-        
-        <script>
-          window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-          ga('create', 'UA-37428382-2', 'auto');
 
- 
-          ga('require', 'eventTracker');
-          ga('require', 'outboundLinkTracker');
-          ga('require', 'maxScrollTracker');
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.">
+  <meta name="author" content="Rubén Antón">
+  <title>Rubocoptero</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../../assets/img/brand/favicon.png" type="image/png">
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="../../assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Page CSS -->
+  <link rel="stylesheet" href="../../assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link type="text/css" href="../../assets/libs/swiper/dist/css/swiper.min.css" rel="stylesheet">
+  <!-- Purpose CSS -->
+  <link rel="stylesheet" href="../../assets/css/purpose.css" id="stylesheet">
+</head>
 
-          ga('send', 'pageview');
-        </script>
-        <script async src="https://www.google-analytics.com/analytics.js"></script>
-        <script async src="./landing/vendor/google/autotrack.custom.js"></script>
-    </head>
-
-    <body>
-          <section class="content-6 v-center" style="padding-top: 7rem; padding-bottom: 7rem">
-            <div>
-              <div class="container"> 
-                <h3>
-                  <img src="./landing/images/presenting-round-very-small.png" width="100" height="100" alt="">
-                  Ayudo a equipos a alcanzar la excelencia técnica necesaria para ser ágiles
-                </h3>
-                <p class="lead">Porque el coste de añadir funcionalidades no tiene porque dispararse a medida que el producto crece</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="quote-text">
-                  Extreme Programming, también conocido como “El Scrum Que Realmente Funciona”
-                </div>
-                <div class="quote-author">
-                  Ron Jeffries, <a href="https://ronjeffries.com/articles/018-01ff/abandon-1/">ronjeffries.com</a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <p>
-                  <b>Extreme Programming</b>, al igual que Scrum, contiene toda la planificación y ciclos de feedback necesarios, sin evitar recomendar unas <b>prácticas técnicas</b> que mantengan el sistema saludable.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section class="content-33">
-            <div class="container">
-              <h4>Acompaño a organizaciones durante su adopción de Extreme Programming</h4>
-              <p>Transmito sus valores y principios a la vez que <b>adapto</b> sus prácticas <b>al contexto de cada organización</b>. Prácticas que mantienen a raya la deuda técnica y reducen el coste de la evolución del software.</p>
-            </div>
-          </section>
-
-
-           <!-- content-11 -->
-          <section class="content-11">
-            <div class="container">
-              <span>¿Eres de Alicante y te gustaría mejorar técnicamente?</span>
-              <a class="btn btn-large btn-danger" href="https://www.meetup.com/Software-Craftsmanship-Alicante/" target="_blank" id="joinUs" ga-on="click" ga-event-category="Community Button" ga-event-action="click">
-                ÚNETE A LA COMUNIDAD
-              </a>
-            </div>
-          </section>
-
-          <!-- Problema -->
-          <!-- <div class="container">
-            <h1>¿Qué sucede cuando se pretende ser ágil sin unas prácticas técnicas adecuadas?</h1>
-          </div>    
-          <section class="content-31">
-                    
-            <div class="container">
-              <div class="row">
-                <div class="number">1</div>
-                <div class="col-sm-8 col-sm-offset-2">
-                  <h3>La organización se beneficia</h3>
-                  <p>Agile business. Crossfunctional teams, Autonomy, </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="number">2</div>
-                <div class="col-sm-8 col-sm-offset-2">
-                  <h3>Deuda técnica se dispara</h3>
-                  <p>Los ciclos cortos aumentan la presión sobre los desarrolladores que a su vez cojen atajos para entregar a tiempo.</p>
-                  <p>Cada vez es más costoso añadir funcionalidades hasta el punto en el que se hace imposible entregar software que funciona al final de cada iteración. Los costes de mantenimiento también se disparan. Eventualmente hay que rescribir el sistema.</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="number">3</div>
-                <div class="col-sm-8 col-sm-offset-2">
-                  <h3>Motivación desaparece</h3>
-                  <p>Los desarrolladores dejan de implicarse en el proceso. La apatía les invade y sólo quieren que los dejen en paz. Eventualmente se marchan en busca de nuevas oportunidades.
-                  Cada vez queda menos gente que entiende el sistema.</p>
-                </div>
-              </div>
-            </div>
-          </section> -->
-
-          <section class="contacts-4">
-            <div class="container">
-              <div class="content">
-                <div class="social-btns">
-                  <a target="_blank" href="https://twitter.com/rubocoptero">
-                    <div class="fui-twitter"></div>
-                    <div class="fui-twitter"></div>
+<body>
+  <header class="header" id="header-main">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="position: fixed;
+    z-index: 1030;">
+      <div class="container">
+        <a class="navbar-brand" href="#">Rubén Antón</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup, #navbarSocial" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active scroll-me" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Eventos</a>
+            <a class="nav-item nav-link scroll-me" href="#bio">Sobre mí</a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSocial">
+            
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="#">
+                        <i class="fas fa-envelope"></i>
+                        <span class="nav-link-inner--text d-lg-none">Email</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="#">
+                        <i class="fab fa-twitter"></i>
+                        <span class="nav-link-inner--text d-lg-none">Twitter</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="#">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="nav-link-inner--text d-lg-none">LinkedIn</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="#">
+                        <i class="fab fa-github"></i>
+                        <span class="nav-link-inner--text d-lg-none">Github</span>
+                    </a>
+                </li>
+                <li class="nav-item mr-0">
+                  <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" target="_blank" class="nav-link d-lg-none">¿Hablamos?</a>
+                  <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" target="_blank" class="btn btn-sm btn-primary btn-icon rounded-pill d-none d-lg-inline-flex" data-toggle="tooltip" data-placement="left" title="" data-original-title="Go to Bootstrap Themes">
+                    <span class="btn-inner--icon"><i class="fas fa-shopping-cart"></i></span>
+                    <span class="btn-inner--text">¿Hablamos?</span>
                   </a>
-                  <a target="_blank" href="https://www.linkedin.com/in/rubocoptero/">
-                    <div class="fui-linkedin"></div>
-                    <div class="fui-linkedin"></div>
+                </li>
+            </ul>
+            
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="main-content">
+    <!-- Header with picture png -->
+    <!-- <section class="slice slice-lg pb-0 bg-gradient-secondary" data-separator="rounded-continuous" data-separator-bg="dark">
+      <div class="container d-flex align-items-end px-0 pt-4">
+        <div class="col">
+          <div class="row align-items-center justify-content-around">
+            <div class="col-lg-6 text-center text-lg-left">
+              <h1>Ayudo a equipos de desarrollo a mantener una velocidad sostenible de manera indefinida</h1>
+              <p class="lead mt-4">Porque se desperdicia demasiado dinero haciendo software.
+              <p class="lead mt-4">Empezando por el testing automático para garantizar el valor.</p>
+              <p class="lead mt-4">Por un mundo sin desperdicio, donde el software sea rentable y el equipo difrute del proceso. Sin desperdiciar más dinero y tiempo en constrir software defectuoso, que amarga la vida que no satisface las necesidades del usuario</p>
+              <div class="mt-5">
+                <a href="#" class="btn btn-primary btn-icon rounded-pill hover-translate-y-n3 mr-4">
+                  <span class="btn-inner--icon"><i class="fas fa-fire"></i></span>
+                  <span class="btn-inner--text">
+                    ¿Hablamos?
+                  </span>
+                </a>
+                <a href="#" class="btn btn-outline-dark rounded-pill hover-translate-y-n3 d-none d-lg-inline-block"></a>
+              </div>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0 align-self-end">
+              <img alt="Image placeholder" src="assets/img/rubocoptero/IMG_3646.png" class="img-fluid img-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Header (v13) -->
+    <section class="slice slice-xl bg-cover bg-size--cover pb-300" data-offset-top="#header-main" style="background-image: url('../../assets/img/backgrounds/module-2.jpg');">
+      <span class="mask bg-dark opacity-8"></span>
+      <div class="container pt-7">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="text-center">
+              <img alt="Image placeholder" src="../../assets/img/rubocoptero/presenting-round-very-small.png" class="avatar rounded-circle avatar-xl m-4">
+              <h2 class="display-5 text-white mb-2">Ayudo a equipos de desarrollo a mantener una velocidad sostenible de manera indefinida</h2>
+              <div class="row justify-content-center">
+                <div class="col-lg-6">
+                  <p class="lead text-white lh-180">Porque el coste de añadir funcionalidades no tiene porque dispararse a medida que el producto crece</p>
+                  <div class="mt-5">
+                    <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" class="btn btn-lg btn-white rounded-pill">¿Hablamos?</a>
+                    <a href="#" class="btn btn-lg btn-link text-light">Learn more</a>
+                  </div>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slice slice-lg pt-lg-0">
+      <div class="container">
+        <div class="card-group flex-column flex-lg-row">
+          <div class="card bg-gradient-primary border-0 px-4 py-5 mt--150">
+            <div class="card-body">
+              <h5 class="h4 text-white">Testing</h5>
+              <p class="mt-4 mb-0 text-white">
+                Cero defectos. Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.
+              </p>
+            </div>
+          </div>
+          <div class="card bg-gradient-dark border-0 px-4 py-5 mt--150">
+            <div class="card-body">
+              <h5 class="h4 text-white">Diseño incremental</h5>
+              <p class="mt-4 mb-0 text-white">
+                Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.
+              </p>
+            </div>
+          </div>
+          <div class="card bg-gradient-primary border-0 px-4 py-5 mt--150">
+            <div class="card-body">
+              <h5 class="h4 text-white">Automatización</h5>
+              <p class="mt-4 mb-0 text-white">
+                Respuesta a negocio. Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="slice slice-lg">
+      <div class="container">
+        <div class="row row-grid justify-content-around align-items-center">
+          <div class="col-lg-5">
+            <div class="">
+              <span class="badge badge-soft-primary">
+                Última ponencia
+              </span>
+              <h5 class="h3 mt-2">¿La deuda técnica te frena?</h5>
+              <p class="lead mt-4 mb-5">Cada vez cuesta más añadir funcionalidades; y cuando ocurre no causa más que problemas en partes no relacionadas del código.</p><a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" class="link link-underline-primary">Play</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img alt="Image placeholder" src="assets/img/rubocoptero/technical_debt.png" class="img-fluid img-center">
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section class="slice slice-lg">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card bg-gradient-primary rounded shadow-lg border-0 text-center position-relative zindex-100">
+              <div class="card-body p-5">
+                <h3 class="text-white font-weight-400">¿Tu velocidad de desarrollo es demasiado lenta?</h3>
+                <p class="text-white">Aprende a convertir tu código en fácilmente mantenible de manera segura</p>
+                <div class="mt-4">
+                  <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" class="btn btn-white btn-icon rounded-pill px-4">
+                    <span class="btn-inner--icon"><i class="fas fa-shopping-cart"></i></span>
+                    <span class="btn-inner--text">Toma el control</span>
                   </a>
-                </div>
-                <h3>Quiero conocer tus necesidades</h3>
-                <p>
-                  Hagamos un hangout para conocer tu caso en detalle y diseñar un plan a medida que te aporte el mayor valor posible.
-                </p>
-                <div class="links">
-                  <a href="mailto:ruben@rubocoptero.com" id="contactMe" ga-on="click" ga-event-category="Email Button" ga-event-action="click">ruben@rubocoptero.com</a>
+                  <a href="../../docs/index.html" class="btn btn-link text-white">Read the Docs</a>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- <div class="delimiter"></div>
-          <footer class="footer-2 bg-midnight-blue">
-            <div class="container">
-              <nav class="pull-left">
-                <ul>
-                  <li class="active"><a href="#">Home</a>
-                  </li>
-                  <li><a href="#">Company</a>
-                  </li>
-                  <li><a href="#">Portfolio</a>
-                  </li>
-                  <li><a href="#">Blog</a>
-                  </li>
-                  <li><a href="#">Contact</a>
-                  </li>
-                </ul>
-              </nav>
-              <div class="social-btns pull-right">
-                <a href="#">
-                  <div class="fui-vimeo"></div>
-                  <div class="fui-vimeo"></div>
-                </a>
-                <a href="#">
-                  <div class="fui-facebook"></div>
-                  <div class="fui-facebook"></div>
-                </a>
-                <a href="#">
-                  <div class="fui-twitter"></div>
-                  <div class="fui-twitter"></div>
-                </a>
+    <!-- Servicios -->
+    <section class="slice slice-lg">
+      <span class="tongue tongue-top"><i class="fas fa-angle-up"></i></span>
+        <div class="container no-padding">
+          <div class="mb-5 text-center">
+            <h3 class=" mt-4">Servicios</h3>
+            <div class="fluid-paragraph mt-3">
+              <p class="lead lh-180">Start building fast, beautiful and modern looking websites in no time using our theme.</p>
+            </div>
+          </div>
+          <div class="card-deck">
+            <div class="card hover-shadow-lg">
+              <div class="card-body">
+                <div class="delimiter-bottom pb-3 mb-4">
+                  <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/Desktop.svg" class="svg-inject" style="height: 60px; width: auto">
+                  <h5 class="mt-4">Formación</h5>
+                </div>
+                <p class="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
-              <div class="additional-links">
-                Be sure to take a look at our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+              <div class="card-footer px-0 py-0 border-0 overflow-hidden">
+                <a href="#" class="btn btn-block btn-primary rounded-0">Learn more</a>
               </div>
             </div>
-          </footer>
-        </div> -->        
+            <div class="card hover-shadow-lg">
+              <div class="card-body">
+                <div class="delimiter-bottom pb-3 mb-4">
+                  <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/Code_2.svg" class="svg-inject" style="height: 60px; width: auto">
+                  <h5 class="mt-4">Coaching</h5>
+                </div>
+                <p class="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer px-0 py-0 border-0 overflow-hidden">
+                <a href="#" class="btn btn-block btn-primary rounded-0">Learn more</a>
+              </div>
+            </div>
+            <div class="card hover-shadow-lg">
+              <div class="card-body">
+                <div class="delimiter-bottom pb-3 mb-4">
+                  <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/Mouse.svg" class="svg-inject" style="height: 60px; width: auto">
+                  <h5 class="mt-4">Unlimited colors</h5>
+                </div>
+                <p class="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <div class="card-footer px-0 py-0 border-0 overflow-hidden">
+                <a href="#" class="btn btn-block btn-primary rounded-0">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </section>
 
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="./landing/vendor/common-files/js/jquery-1.10.2.min.js"></script>
-        <script src="./landing/vendor/flat-ui/js/bootstrap.min.js"></script>
-        <script src="./landing/vendor/common-files/js/modernizr.custom.js"></script>
-        <script src="./landing/vendor/common-files/js/page-transitions.js"></script>
-        <script src="./landing/vendor/common-files/js/startup-kit.js"></script>
-    </body>
+    <section class="slice slice-lg bg-gradient-primary">
+      <span class="tongue tongue-top"><i class="fas fa-angle-up"></i></span>
+      <div class="container">
+        <div class="mb-5 text-center">
+          <h3 class="text-white mt-4">¿Dónde puedes encontrarme?</h3>
+          <div class="fluid-paragraph mt-3">
+            <p class="lead lh-180 text-white">Comparto mi experiencia en diversos eventos.</p>
+          </div>
+        </div>
+
+        <div class="row row-grid justify-content-center">
+          <div class="col-lg-10">
+            <div class="mb-4">
+              <h3 class="heading h3 text-white text-uppercase mb-0" style="font-family: 'Oswald', sans-serif;">Próximos</h3>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-2">
+                    <span class="d-block text-center text-uppercase text-warning">June</span>
+                    <span class="d-block text-center h1 mb-0" style="font-family: 'Oswald', sans-serif;">20</span>
+                  </div>
+                  <div class="col-md-10 text-center text-md-left">
+                    <h3 class="h5 mb-0">Isle of Wight Festival</h3>
+                    <p class="mb-0">Meet at United Kingdom on June 20th at 20:00</p>
+                    <a href="#" class="font-weight-bold">Get tickets</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <h3 class="heading h3 text-white text-uppercase mb-0" style="font-family: 'Oswald', sans-serif;">Pasados</h3>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-2">
+                    <span class="d-block text-center text-uppercase text-warning">June</span>
+                    <span class="d-block text-center h1 mb-0" style="font-family: 'Oswald', sans-serif;">22</span>
+                  </div>
+                  <div class="col-md-10 text-center text-md-left">
+                    <h3 class="h5 mb-0">Isle of Wight Festival</h3>
+                    <p class="mb-0">Meet at United Kingdom on June 20th at 20:00</p>
+                    <a href="#">Get tickets</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-2">
+                    <span class="d-block text-center text-uppercase text-warning">June</span>
+                    <span class="d-block text-center h1 mb-0" style="font-family: 'Oswald', sans-serif;">25</span>
+                  </div>
+                  <div class="col-md-10 text-center text-md-left">
+                    <h3 class="h5 mb-0">Isle of Wight Festival</h3>
+                    <p class="mb-0">Meet at United Kingdom on June 20th at 20:00</p>
+                    <a href="#">Get tickets</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slice slice-lg bg-dark bg-cover bg-size--cover" style="background-image: url('assets/img/backgrounds/img-7.jpg');" id="bio">
+      <span class="mask bg-dark opacity-9"></span>
+      <div class="container">
+        <div class="row row-grid">
+          <div class="col-lg-6">
+            <h4 class="text-white mb-4">Sobre Rubo</h4>
+            <p class="lead text-white lh-180 mb-4">
+              Comencé mi carrera como programador persiguiendo la excelencia técnica. Llegado un punto, me dí cuenta que estaba alcanzando un máximo local. Por ello, decidí adquirir una visión holística <!-- del proceso de desarrollo de software --> profundizando en el factor humano, la disciplina de producto, la perspectiva de negocio y la gestión del proceso de desarrollo.
+            </p>
+            <p class="lead text-white lh-180 mb-4">
+              Cumplí mi sueño de trabajar en San Francisco donde, además de desarrollar, ayude a la organización a darle fundamento a sus ceremonías ágiles, maximizar el ROI de sus incrementos de producto por medio de un mejor troceado; y evolucionar sus prácticas técnicas aumentando la predictivilidad del proceso.
+            </p>
+            <p class="lead text-white lh-180 mb-4">
+              Fundé la comunidad Software Crafters Alicante en 2016 donde sigo compartiendo mi conocimiento.
+            </p>
+          </div>
+          <div class="col-lg-5 ml-auto">
+            <img alt="Image placeholder" src="assets/img/rubocoptero/si-2.jpg" class="img-fluid rounded shadow-lg hover-scale-110">
+          </div>
+        </div>
+      </div>
+    </section>   
+    
+
+
+    
+   
+
+
+
+    <!-- Subscribe (v3) -->
+    <section class="slice slice-lg">
+      <div class="container">
+        <div class="mb-5 text-center">
+          <h3 class=" mt-4">Subscribe for weekly news</h3>
+          <div class="fluid-paragraph mt-3">
+            <p class="lead lh-180">Customization has never been easier. Purpose has all the right tools in order to make your website building process a breeze.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-7">
+            <form class="mt-4">
+              <div class="form-group mb-0">
+                <div class="input-group input-group-lg input-group-merge rounded-pill bg-dark">
+                  <input type="email" class="form-control form-control-flush" name="email" placeholder="Enter your email address" aria-label="Enter your email address">
+                  <div class="input-group-append">
+                    <button class="btn btn-dark" type="button">
+                      <span class="fas fa-paper-plane"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer p-0 footer-dark bg-gradient-dark" id="footer-main">
+    <div class="container">
+      <div class="py-4">
+        <div class="row align-items-md-center">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="d-flex align-items-center">
+              <p class="text-sm mb-0">Copyright © 2018, Rubocoptero</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4 mb-sm-0">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="pages/utility/support.html">Legal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/utility/terms.html">Términos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/utility/privacy.html">Privacidad</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="https://dribbble.com/webpixels" target="_blank">
+                  <i class="fab fa-dribbble"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/webpixelsofficial" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/webpixels" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/webpixels" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="../../assets/js/purpose.core.js"></script>
+  <!-- Page JS -->
+  <script src="../../assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+  <!-- Purpose JS -->
+  <script src="../../assets/js/purpose.js"></script>
+  <!-- Demo JS - remove it when starting your project -->
+  <script src="../../assets/js/demo.js"></script>
+  <!-- Navbar background color -->
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        var scrollPosition = $(window).scrollTop();
+        var $nav = $("nav");
+
+        $nav.toggleClass('scrolled', scrollPosition > 150);
+      });
+    });
+  </script>
+</body>
+
 </html>
