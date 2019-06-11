@@ -10,16 +10,16 @@
   <!-- Favicon -->
   <link rel="icon" href="../../assets/img/brand/favicon.png" type="image/png">
   <!-- Font Awesome 5 -->
-  <link rel="stylesheet" href="../../assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Page CSS -->
-  <link rel="stylesheet" href="../../assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
-  <link type="text/css" href="../../assets/libs/swiper/dist/css/swiper.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="../../assets/libs/sweetalert2/dist/sweetalert2.min.css">
   <!-- Purpose CSS -->
   <link rel="stylesheet" href="../../assets/css/purpose.css" id="stylesheet">
 </head>
 
 <body>
   <header class="header" id="header-main">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="position: fixed;
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent" style="position: fixed;
     z-index: 1030;">
       <div class="container">
         <a class="navbar-brand" href="#">Rubén Antón</a>
@@ -29,7 +29,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link active scroll-me" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Eventos</a>
+            <a class="nav-item nav-link scroll-me" href="#services">Servicios</a>
+            <a class="nav-item nav-link scroll-me" href="#events">Eventos</a>
             <a class="nav-item nav-link scroll-me" href="#bio">Sobre mí</a>
           </div>
         </div>
@@ -61,9 +62,9 @@
                     </a>
                 </li>
                 <li class="nav-item mr-0">
-                  <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" target="_blank" class="nav-link d-lg-none">¿Hablamos?</a>
-                  <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" target="_blank" class="btn btn-sm btn-primary btn-icon rounded-pill d-none d-lg-inline-flex" data-toggle="tooltip" data-placement="left" title="" data-original-title="Go to Bootstrap Themes">
-                    <span class="btn-inner--icon"><i class="fas fa-shopping-cart"></i></span>
+                  <a href="#contact" class="nav-link d-lg-none scroll-me">¿Hablamos?</a>
+                  <a href="#contact" class="btn btn-sm btn-primary btn-icon rounded-pill d-none d-lg-inline-flex scroll-me">
+                    <span class="btn-inner--icon"><i class="far fa-comment-dots"></i></span>
                     <span class="btn-inner--text">¿Hablamos?</span>
                   </a>
                 </li>
@@ -112,10 +113,10 @@
               <h2 class="display-5 text-white mb-2">Ayudo a equipos de desarrollo a mantener una velocidad sostenible de manera indefinida</h2>
               <div class="row justify-content-center">
                 <div class="col-lg-6">
-                  <p class="lead text-white lh-180">Porque el coste de añadir funcionalidades no tiene porque dispararse a medida que el producto crece</p>
+                  <p class="lead text-white lh-180">El coste de añadir funcionalidades no tiene por qué dispararse a medida que el producto crece</p>
                   <div class="mt-5">
-                    <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" class="btn btn-lg btn-white rounded-pill">¿Hablamos?</a>
-                    <a href="#" class="btn btn-lg btn-link text-light">Learn more</a>
+                    <a href="#contact" class="btn btn-lg btn-white rounded-pill scroll-me">¿Hablamos?</a>
+                    <!-- <a href="#" class="btn btn-lg btn-link text-light">Learn more</a> -->
                   </div>
                 </div>                
               </div>
@@ -127,30 +128,32 @@
 
 
 
-    <section class="slice slice-lg pt-lg-0">
+    <section class="slice slice-lg py-lg-0">
       <div class="container">
         <div class="card-group flex-column flex-lg-row">
           <div class="card bg-gradient-primary border-0 px-4 py-5 mt--150">
             <div class="card-body">
-              <h5 class="h4 text-white">Testing</h5>
+              <h5 class="benefits-title text-white">Elimina los defectos</h5>
               <p class="mt-4 mb-0 text-white">
-                Cero defectos. Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.
+                Recupera la confianza de negocio estableciendo una estrategia de testing automatizado que garantice la calidad del producto.
               </p>
             </div>
           </div>
           <div class="card bg-gradient-dark border-0 px-4 py-5 mt--150">
             <div class="card-body">
-              <h5 class="h4 text-white">Diseño incremental</h5>
+              <h5 class="benefits-title text-white">Aumenta la productividad</h5>
               <p class="mt-4 mb-0 text-white">
-                Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.
+                Responde rápidamente a las necesidades de negocio mejorando el diseño y manteniendo a raya la deuda técnica.
               </p>
             </div>
           </div>
           <div class="card bg-gradient-primary border-0 px-4 py-5 mt--150">
             <div class="card-body">
-              <h5 class="h4 text-white">Automatización</h5>
+              <h5 class="benefits-title text-white">Retén el talento</h5>
               <p class="mt-4 mb-0 text-white">
-                Respuesta a negocio. Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.
+                Mejora la motivación de los equipos formándolos en habilidades que les permiten tomar el control y crecer como profesionales.
+
+                <!-- les facilitan alcanzar los objetivos y volver a tomar el control del sistema. -->
               </p>
             </div>
           </div>
@@ -160,8 +163,10 @@
 
 
 
+    
 
-    <section class="slice slice-lg">
+
+    <!-- <section class="slice slice-lg">
       <div class="container">
         <div class="row row-grid justify-content-around align-items-center">
           <div class="col-lg-5">
@@ -178,9 +183,189 @@
           </div>
         </div>
       </div>
+    </section> -->
+
+    <!-- Servicios -->
+    <section class="slice slice-lg pt-lg-7" id="services">
+      <div class="container">
+        <div class="mb-5 text-center">
+          <span class="badge badge-soft-success badge-pill badge-lg">
+            Servicios
+          </span>
+          <h3 class=" mt-4">¿Cómo trabajo?</h3>
+          <div class="fluid-paragraph mt-3">
+            <p class="lead lh-180">Cada organización es única, me adapto a su contexto para introducir buenas prácticas de desarrollo que garantizan velocidad y calidad.</p>
+          </div>
+        </div>
+        <div class="card-deck">
+          <div class="card hover-shadow-lg">
+            <div class="card-body">
+              <div class="delimiter-bottom pb-3 mb-4">
+                <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/Desktop.svg" class="svg-inject" style="height: 60px; width: auto">
+                <h5 class="mt-4">Evaluación</h5>
+              </div>
+              <p class="">
+                Quieres descubrir las prácticas que os harían dar un salto de calidad y cómo podéis empezar a introducirlas.
+              </p>
+            </div>
+            <div class="card-footer px-0 py-0 border-0 overflow-hidden">
+              <a href="#contact" class="btn btn-block btn-primary rounded-0 scroll-me" id="evaluation-cta">Cuéntame más</a>
+            </div>
+          </div>
+          <div class="card hover-shadow-lg">
+            <div class="card-body">
+              <div class="delimiter-bottom pb-3 mb-4">
+                <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/Code_2.svg" class="svg-inject" style="height: 60px; width: auto">
+                <h5 class="mt-4">Formación práctica</h5>
+              </div>
+              <p class="">Buscas alguien con experiencia de campo que os ayude a interiorizar los conceptos y técnicas que facilitarán vuestro día a día.</p>
+            </div>
+            <div class="card-footer px-0 py-0 border-0 overflow-hidden">
+              <a href="#contact" class="btn btn-block btn-primary rounded-0 scroll-me" id="training-cta">Cuéntame más</a>
+            </div>
+          </div>
+          <div class="card hover-shadow-lg">
+            <div class="card-body">
+              <div class="delimiter-bottom pb-3 mb-4">
+                <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/Mouse.svg" class="svg-inject" style="height: 60px; width: auto">
+                <h5 class="mt-4">Acompañamiento</h5>
+              </div>
+              <p class="">Necesitas alguien que haga pairing contigo para aplicar lo aprendido sobre tu entorno de producción.</p>
+            </div>
+            <div class="card-footer px-0 py-0 border-0 overflow-hidden">
+              <a href="#contact" class="btn btn-block btn-primary rounded-0 scroll-me" id="coaching-cta">Cuéntame más</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-     <section class="slice slice-lg">
+    <section class="slice slice-lg bg-gradient-primary" id="events">
+      <span class="tongue tongue-top"><i class="fas fa-angle-up"></i></span>
+      <div class="container">
+        <div class="mb-5 text-center">
+          <h3 class="text-white mt-4">¿Quieres verme en acción?</h3>
+          <div class="fluid-paragraph mt-3">
+            <p class="lead lh-180 text-white">Me gusta compartir mi experiencia con la comunidad.</p>
+          </div>
+        </div>
+
+        <div class="row row-grid justify-content-center">
+          <div class="col-lg-10">
+            <div class="mb-4">
+              <h3 class="heading h3 text-white text-uppercase mb-0" style="font-family: 'Oswald', sans-serif;">Próximamente</h3>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="row d-flex align-items-center">
+                  <div class="col-md-2">
+                    <span class="d-block text-center text-uppercase text-warning">Junio</span>
+                    <span class="d-block text-center h1 mb-0" style="font-family: 'Oswald', sans-serif;">17</span>
+                  </div>
+                  <div class="col-md-8 text-center text-md-left">
+                    <span class="badge badge-soft-primary">
+                        <i class="fas fa-laptop-code"></i>Live Coding
+                    </span>
+                    <h3 class="h5 mb-0 mt-2">
+                      De código legacy a código limpio y mantenible
+                    </h3>
+                    <p class="mb-0">Resolveremos juntos los problemas más comunes en grandes sistemas legacy.</p>
+                  </div>
+                  <div class="col-md-2 btn-container">
+                    <a href="https://www.meetup.com/Software-Crafters-Alicante/events/261640799/" target="_blank" class="btn btn-primary rounded-pill">Asiste</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="text-center mt-5">
+              <a href="#" class="text-white"><i class="fas fa-angle-right mr-2"></i>Verlos todos</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bio -->
+    <section class="slice slice-lg bg-dark bg-cover bg-size--cover" style="background-image: url('assets/img/backgrounds/img-7.jpg');" id="bio">
+      <span class="mask bg-dark opacity-9"></span>
+      <div class="container">
+        <div class="row row-grid d-flex align-items-center">
+          <div class="col-lg-6">
+            <h4 class="text-white mb-4">Sobre Rubo</h4>
+            <p class="lead text-white lh-180 mb-4">
+              Agile, Extreme Programming y Lean son la mejor forma que conozco para desarrollar productos software.
+            </p>
+            <p class="lead text-white lh-180 mb-4">
+              Comencé mi carrera como programador persiguiendo la excelencia técnica. Llegado un punto, me dí cuenta que estaba alcanzando un máximo local. Por ello, decidí adquirir una visión holística profundizando en el factor humano, la disciplina de producto, la perspectiva de negocio y la gestión del proceso de desarrollo.
+            </p>
+            <p class="lead text-white lh-180 mb-4">
+              Tras cumplir mi sueño de trabajar en San Francisco, tomé consciencia del gran impacto que puedo tener dentro de una organización.
+            </p>
+            <p class="lead text-white lh-180 mb-4">
+              Fundé la comunidad Software Crafters Alicante en 2016 donde sigo compartiendo mi experiencia.
+            </p>
+          </div>
+          <div class="col-lg-5 ml-auto">
+            <img alt="Image placeholder" src="assets/img/rubocoptero/si-2.jpg" class="img-fluid rounded shadow-lg hover-scale-110">
+            <ul class="nav justify-content-center mt-4">
+              <li class="nav-item">
+                <a class="nav-link h3 px-4" href="https://www.instagram.com/webpixelsofficial" target="_blank"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link h3 px-4" href="https://www.facebook.com/webpixels" target="_blank"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link h3 px-4" href="https://github.com/webpixels" target="_blank"><i class="fab fa-github"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link h3 px-4" href="https://dribbble.com/webpixels" target="_blank"><i class="fab fa-dribbble"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>   
+
+
+    <!-- Contact -->
+    <section class="slice slice-lg" id="contact">
+      <div class="container">
+        <div class="mb-5 text-center">
+          <h2>Quiero conocer tus necesidades</h2>
+          <div class="fluid-paragraph mt-4">
+            <p class="lead lh-180">
+              Hagamos un hangout para que me cuentes tu caso en detalle y diseñar un plan a medida que te aporte el mayor valor posible.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-7">
+            <form class="mt-4" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+              <p class="d-none">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+              <p class="d-none">
+                <label>Don’t fill this out if you're human: <input type="text" name="context" id="context"/></label>
+              </p>
+              <div class="form-group mb-0">
+                <div class="input-group input-group-lg input-group-merge rounded-pill bg-dark">
+                  <input type="email" class="form-control form-control-flush" name="email" placeholder="Introduce tu correo electrónico" aria-label="Introduce tu correo electrónico">
+                  <div class="input-group-append">
+                    <button class="btn btn-dark" type="submit">
+                      <span class="fas fa-paper-plane"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- <section class="slice slice-lg">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -200,185 +385,10 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Servicios -->
-    <section class="slice slice-lg">
-      <span class="tongue tongue-top"><i class="fas fa-angle-up"></i></span>
-        <div class="container no-padding">
-          <div class="mb-5 text-center">
-            <h3 class=" mt-4">Servicios</h3>
-            <div class="fluid-paragraph mt-3">
-              <p class="lead lh-180">Start building fast, beautiful and modern looking websites in no time using our theme.</p>
-            </div>
-          </div>
-          <div class="card-deck">
-            <div class="card hover-shadow-lg">
-              <div class="card-body">
-                <div class="delimiter-bottom pb-3 mb-4">
-                  <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/Desktop.svg" class="svg-inject" style="height: 60px; width: auto">
-                  <h5 class="mt-4">Formación</h5>
-                </div>
-                <p class="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-              <div class="card-footer px-0 py-0 border-0 overflow-hidden">
-                <a href="#" class="btn btn-block btn-primary rounded-0">Learn more</a>
-              </div>
-            </div>
-            <div class="card hover-shadow-lg">
-              <div class="card-body">
-                <div class="delimiter-bottom pb-3 mb-4">
-                  <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/Code_2.svg" class="svg-inject" style="height: 60px; width: auto">
-                  <h5 class="mt-4">Coaching</h5>
-                </div>
-                <p class="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-              <div class="card-footer px-0 py-0 border-0 overflow-hidden">
-                <a href="#" class="btn btn-block btn-primary rounded-0">Learn more</a>
-              </div>
-            </div>
-            <div class="card hover-shadow-lg">
-              <div class="card-body">
-                <div class="delimiter-bottom pb-3 mb-4">
-                  <img alt="Image placeholder" src="../../assets/img/icons/essential/detailed/Mouse.svg" class="svg-inject" style="height: 60px; width: auto">
-                  <h5 class="mt-4">Unlimited colors</h5>
-                </div>
-                <p class="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-              <div class="card-footer px-0 py-0 border-0 overflow-hidden">
-                <a href="#" class="btn btn-block btn-primary rounded-0">Learn more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </span>
-    </section>
-
-    <section class="slice slice-lg bg-gradient-primary">
-      <span class="tongue tongue-top"><i class="fas fa-angle-up"></i></span>
-      <div class="container">
-        <div class="mb-5 text-center">
-          <h3 class="text-white mt-4">¿Dónde puedes encontrarme?</h3>
-          <div class="fluid-paragraph mt-3">
-            <p class="lead lh-180 text-white">Comparto mi experiencia en diversos eventos.</p>
-          </div>
-        </div>
-
-        <div class="row row-grid justify-content-center">
-          <div class="col-lg-10">
-            <div class="mb-4">
-              <h3 class="heading h3 text-white text-uppercase mb-0" style="font-family: 'Oswald', sans-serif;">Próximos</h3>
-            </div>
-            <div class="card mb-4">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-2">
-                    <span class="d-block text-center text-uppercase text-warning">June</span>
-                    <span class="d-block text-center h1 mb-0" style="font-family: 'Oswald', sans-serif;">20</span>
-                  </div>
-                  <div class="col-md-10 text-center text-md-left">
-                    <h3 class="h5 mb-0">Isle of Wight Festival</h3>
-                    <p class="mb-0">Meet at United Kingdom on June 20th at 20:00</p>
-                    <a href="#" class="font-weight-bold">Get tickets</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mb-4">
-              <h3 class="heading h3 text-white text-uppercase mb-0" style="font-family: 'Oswald', sans-serif;">Pasados</h3>
-            </div>
-            <div class="card mb-4">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-2">
-                    <span class="d-block text-center text-uppercase text-warning">June</span>
-                    <span class="d-block text-center h1 mb-0" style="font-family: 'Oswald', sans-serif;">22</span>
-                  </div>
-                  <div class="col-md-10 text-center text-md-left">
-                    <h3 class="h5 mb-0">Isle of Wight Festival</h3>
-                    <p class="mb-0">Meet at United Kingdom on June 20th at 20:00</p>
-                    <a href="#">Get tickets</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card mb-4">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-2">
-                    <span class="d-block text-center text-uppercase text-warning">June</span>
-                    <span class="d-block text-center h1 mb-0" style="font-family: 'Oswald', sans-serif;">25</span>
-                  </div>
-                  <div class="col-md-10 text-center text-md-left">
-                    <h3 class="h5 mb-0">Isle of Wight Festival</h3>
-                    <p class="mb-0">Meet at United Kingdom on June 20th at 20:00</p>
-                    <a href="#">Get tickets</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slice slice-lg bg-dark bg-cover bg-size--cover" style="background-image: url('assets/img/backgrounds/img-7.jpg');" id="bio">
-      <span class="mask bg-dark opacity-9"></span>
-      <div class="container">
-        <div class="row row-grid">
-          <div class="col-lg-6">
-            <h4 class="text-white mb-4">Sobre Rubo</h4>
-            <p class="lead text-white lh-180 mb-4">
-              Comencé mi carrera como programador persiguiendo la excelencia técnica. Llegado un punto, me dí cuenta que estaba alcanzando un máximo local. Por ello, decidí adquirir una visión holística <!-- del proceso de desarrollo de software --> profundizando en el factor humano, la disciplina de producto, la perspectiva de negocio y la gestión del proceso de desarrollo.
-            </p>
-            <p class="lead text-white lh-180 mb-4">
-              Cumplí mi sueño de trabajar en San Francisco donde, además de desarrollar, ayude a la organización a darle fundamento a sus ceremonías ágiles, maximizar el ROI de sus incrementos de producto por medio de un mejor troceado; y evolucionar sus prácticas técnicas aumentando la predictivilidad del proceso.
-            </p>
-            <p class="lead text-white lh-180 mb-4">
-              Fundé la comunidad Software Crafters Alicante en 2016 donde sigo compartiendo mi conocimiento.
-            </p>
-          </div>
-          <div class="col-lg-5 ml-auto">
-            <img alt="Image placeholder" src="assets/img/rubocoptero/si-2.jpg" class="img-fluid rounded shadow-lg hover-scale-110">
-          </div>
-        </div>
-      </div>
-    </section>   
-    
-
-
-    
-   
+    </section> -->
 
 
 
-    <!-- Subscribe (v3) -->
-    <section class="slice slice-lg">
-      <div class="container">
-        <div class="mb-5 text-center">
-          <h3 class=" mt-4">Subscribe for weekly news</h3>
-          <div class="fluid-paragraph mt-3">
-            <p class="lead lh-180">Customization has never been easier. Purpose has all the right tools in order to make your website building process a breeze.</p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-5 col-md-7">
-            <form class="mt-4">
-              <div class="form-group mb-0">
-                <div class="input-group input-group-lg input-group-merge rounded-pill bg-dark">
-                  <input type="email" class="form-control form-control-flush" name="email" placeholder="Enter your email address" aria-label="Enter your email address">
-                  <div class="input-group-append">
-                    <button class="btn btn-dark" type="button">
-                      <span class="fas fa-paper-plane"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
   <footer class="footer p-0 footer-dark bg-gradient-dark" id="footer-main">
     <div class="container">
@@ -433,23 +443,11 @@
   <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
   <script src="../../assets/js/purpose.core.js"></script>
   <!-- Page JS -->
-  <script src="../../assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
-  <script src="../../assets/libs/swiper/dist/js/swiper.min.js"></script>
+  <script src="../../assets/libs/sweetalert2/dist/sweetalert2.min.js"></script>
   <!-- Purpose JS -->
   <script src="../../assets/js/purpose.js"></script>
-  <!-- Demo JS - remove it when starting your project -->
-  <script src="../../assets/js/demo.js"></script>
-  <!-- Navbar background color -->
-  <script>
-    $(document).ready(function () {
-      $(window).scroll(function () {
-        var scrollPosition = $(window).scrollTop();
-        var $nav = $("nav");
-
-        $nav.toggleClass('scrolled', scrollPosition > 150);
-      });
-    });
-  </script>
+  <!-- Custom JS -->
+  <script src="../../assets/js/main.js"></script>  
 </body>
 
 </html>

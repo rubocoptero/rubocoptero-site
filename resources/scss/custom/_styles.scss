@@ -14,6 +14,17 @@
   line-height: 1.3;
 }
 
+.benefits-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+// Navbar
+
+.navbar-transparent {
+  background-color: transparent;
+}
+
 nav.scrolled {
   @extend .navbar-light;
   background: $white;

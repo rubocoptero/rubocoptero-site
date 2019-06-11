@@ -102,7 +102,7 @@ gulp.task('clean:js', function(done) {
 gulp.task('concat:js-core', function(done) {
 	return gulp
 		.src([
-            'assets/libs/jquery/dist/jquery.min.js',
+          'assets/libs/jquery/dist/jquery.min.js',
 	        'assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js',
 	        'assets/libs/in-view/dist/in-view.min.js',
 	        'assets/libs/sticky-kit/dist/sticky-kit.min.js',
@@ -121,13 +121,13 @@ gulp.task('concat:js', function(done) {
 	return gulp
 		.src([
             paths.src.resources + '/js/purpose/license.js',
-			paths.src.resources + '/js/purpose/layout.js',
-			paths.src.resources + '/js/purpose/init/*.js',
-			paths.src.resources + '/js/purpose/custom/*.js',
-			paths.src.resources + '/js/purpose/maps/*.js',
-			paths.src.resources + '/js/purpose/charts/*.js',
-			paths.src.resources + '/js/purpose/libs/*.js',
-			paths.src.resources + '/js/purpose/charts/*js'
+      			paths.src.resources + '/js/purpose/layout.js',
+      			paths.src.resources + '/js/purpose/init/*.js',
+      			paths.src.resources + '/js/purpose/custom/*.js',
+      			paths.src.resources + '/js/purpose/maps/*.js',
+      			paths.src.resources + '/js/purpose/charts/*.js',
+      			paths.src.resources + '/js/purpose/libs/*.js',
+      			paths.src.resources + '/js/purpose/charts/*js'
         ])
 		.pipe(concat('purpose.js'))
 		.pipe(gulp.dest(paths.dist.js))
