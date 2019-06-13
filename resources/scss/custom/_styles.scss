@@ -1,0 +1,71 @@
+// User styles
+//
+// This is the place where you should place all additional styles and imports.
+// This will allow you to take advantage of future updates with lower time consumed on the upgrade process.
+
+.avatar-xl {
+  height: 100px;
+  width: 100px;
+}
+
+.display-5 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+@media (max-width: 1200px) {
+  .display-5 {
+    font-size: calc(1.425rem + 2.7vw) ;
+  }
+}
+
+.benefits-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+// Navbar
+
+.navbar-transparent {
+  background-color: transparent;
+}
+
+nav.scrolled {
+  @extend .navbar-light;
+  background: $white;
+  box-shadow: 0 .125rem .25rem rgba(31, 45, 61, .08);
+}
+
+#navbar .active {
+  font-weight: 900;
+}
+
+#navbarSocial {
+  .nav-item {
+    margin-right: 0;
+  }
+
+  .nav-link {
+    padding-left: 0;
+  }
+}
+
+.navbar-brand img {
+  margin-right: -0.2rem;
+}
+
+// Services
+
+
+@media (max-width: 992px) {
+  #services {
+    .card-deck {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card {
+      margin-bottom: 15px;
+    }
+  }
+}
