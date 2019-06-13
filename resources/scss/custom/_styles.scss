@@ -33,6 +33,7 @@
 nav.scrolled {
   @extend .navbar-light;
   background: $white;
+  box-shadow: 0 .125rem .25rem rgba(31, 45, 61, .08);
 }
 
 #navbar .active {
@@ -47,6 +48,10 @@ nav.scrolled {
   .nav-link {
     padding-left: 0;
   }
+}
+
+.navbar-brand img {
+  margin-right: -0.2rem;
 }
 
 // Services

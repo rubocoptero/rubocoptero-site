@@ -30585,6 +30585,7 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
 nav.scrolled
 {
     background: #fff;
+    box-shadow: 0 .125rem .25rem rgba(31, 45, 61, .08);
 }
 
 #navbar .active
@@ -30600,6 +30601,11 @@ nav.scrolled
 #navbarSocial .nav-link
 {
     padding-left: 0;
+}
+
+.navbar-brand img
+{
+    margin-right: -.2rem;
 }
 
 @media (max-width: 992px)
