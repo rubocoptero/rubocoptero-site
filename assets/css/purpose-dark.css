@@ -30601,3 +30601,16 @@ nav.scrolled
 {
     padding-left: 0;
 }
+
+@media (max-width: 992px)
+{
+    #services .card-deck
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    #services .card
+    {
+        margin-bottom: 15px;
+    }
+}
