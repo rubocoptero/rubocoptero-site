@@ -30578,3 +30578,18 @@ nav.scrolled
 {
     background: #fff;
 }
+
+#navbar .active
+{
+    font-weight: 900;
+}
+
+#navbarSocial .nav-item
+{
+    margin-right: 0;
+}
+
+#navbarSocial .nav-link
+{
+    padding-left: 0;
+}
