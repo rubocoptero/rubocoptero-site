@@ -1,11 +1,28 @@
 $(document).ready(function () {
     // Navbar background on scroll
+
+    var toggleClassPosition = 150;
+
     $(window).scroll(function () {
         var scrollPosition = $(window).scrollTop();
         var $nav = $("nav");
 
-        $nav.toggleClass('scrolled', scrollPosition > 150);
+        $nav.toggleClass('scrolled', scrollPosition > toggleClassPosition);
     });
+
+    $(".navbar-toggler").click(function() {
+        var scrollPosition = $(window).scrollTop();
+        var $nav = $("nav");
+
+        if (scrollPosition < toggleClassPosition) {
+          $nav.toggleClass('scrolled');
+        }
+    });
+
+    // Close navbar on click when collapsed
+    $(".navbar a").click(function () {
+        $('.navbar-collapse').collapse('hide');
+    })
 
     // Form submission
     $("#contact-form").submit(function(e) {
