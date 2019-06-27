@@ -3,12 +3,13 @@
 // Gulp file to automate the various tasks
 
 let gulp = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer'),
+  autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync').create(),
 	csscomb = require('gulp-csscomb'),
 	cleanCss = require('gulp-clean-css'),
 	cache = require('gulp-cache'),
-    concat = require('gulp-concat'),
+  concat = require('gulp-concat'),
+  cp = require('child_process'),
 	cssnano = require('gulp-cssnano'),
 	del = require('del'),
 	imagemin = require('gulp-imagemin'),
@@ -34,9 +35,21 @@ var paths = {
 		css: 'assets/css',
 		js: 'assets/js'
 	},
+  site: {
+    base: '_site/',
+    css: '_site/assets/css',
+    js: '_site/assets/js'
+  },
 	src: {
 		base: './',
-		html: '**/*.html',
+    html: [
+      '*.html',
+      '_layouts/*.html',
+      '_pages/*',
+      '_posts/*',
+      '_data/*',
+      '_includes/*'
+    ],
 		css: 'assets/css',
 		js: 'assets/js',
 		img: 'assets/img/**/*.+(png|jpg|gif|svg)',
@@ -67,10 +80,11 @@ gulp.task('compile:scss', function(done) {
 			browsers: ['> 1%']
 		}))
 		.pipe(csscomb())
-		.pipe(gulp.dest(paths.dist.css))
-        .pipe(browserSync.reload({
+		.pipe(gulp.dest(paths.site.css))
+    .pipe(browserSync.reload({
 			stream: true
-		}));
+		}))
+    .pipe(gulp.dest(paths.dist.css));
 	done();
 });
 
@@ -83,6 +97,7 @@ gulp.task('minify:css', function(done) {
 		.pipe(rename({
 			suffix: '.min'
 		}))
+    .pipe(gulp.dest(paths.site.css))
 		.pipe(gulp.dest(paths.dist.css))
     done();
 });
@@ -112,6 +127,7 @@ gulp.task('concat:js-core', function(done) {
 	        'assets/libs/imagesloaded/imagesloaded.pkgd.min.js'
         ])
 		.pipe(concat('purpose.core.js'))
+    .pipe(gulp.dest(paths.site.js))
 		.pipe(gulp.dest(paths.dist.js));
 
 	done();
@@ -130,10 +146,11 @@ gulp.task('concat:js', function(done) {
       			paths.src.resources + '/js/purpose/charts/*js'
         ])
 		.pipe(concat('purpose.js'))
-		.pipe(gulp.dest(paths.dist.js))
-        .pipe(browserSync.reload({
+		.pipe(gulp.dest(paths.site.js))
+    .pipe(browserSync.reload({
 			stream: true
-		}));
+		}))
+    .pipe(gulp.dest(paths.dist.js));
 	done();
 });
 
@@ -146,6 +163,7 @@ gulp.task('minify:js', function(done) {
 		.pipe(rename({
 			suffix: '.min'
 		}))
+    .pipe(gulp.dest(paths.site.js))
 		.pipe(gulp.dest(paths.dist.js))
     done();
 });
@@ -158,6 +176,11 @@ gulp.task('clean:dist', function(done) {
         paths.dist.js + '/**/purpose*.js'
     ]);
     done();
+});
+
+gulp.task('clean:site', gulp.series('clean:dist'), function(done) {
+  return del(paths.site.base);
+  done();
 });
 
 // Copy CSS
@@ -184,10 +207,10 @@ gulp.task('create:dist', function(done) {
 
 // Initialize the browsersync
 
-function browserSyncInit(done) {
+function browserSyncServe(done) {
 	browserSync.init({
 		server: {
-			baseDir: './'
+			baseDir: '_site'
 		},
 		port: 3000
 	});
@@ -204,18 +227,31 @@ function browserSyncReload(done) {
 function watchFiles() {
     gulp.watch(paths.src.resources + '/scss/**/*.scss', gulp.series('compile:scss'));
     gulp.watch(paths.src.resources + '/js/**/*.js', gulp.series('concat:js'));
-    gulp.watch(paths.src.html, browserSyncReload);
+    gulp.watch(
+      paths.src.html, 
+      gulp.series(jekyllBuild, browserSyncReload)
+    );
 }
 
 // Bundled tasks
 
 gulp.task('js', gulp.series('clean:js', 'concat:js-core', 'concat:js', 'minify:js'));
 gulp.task('css', gulp.series('clean:css', 'compile:scss', 'minify:css'));
-gulp.task('browserSync', gulp.series(browserSyncInit, watchFiles));
+gulp.task('browserSync', gulp.series(browserSyncServe, watchFiles));
+
+// Jekyll
+
+function jekyllBuild() {
+  return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+}
+
+// Serve
+
+gulp.task('serve', gulp.parallel(jekyllBuild, browserSyncServe, watchFiles))
 
 // Build
 
-gulp.task('build', gulp.series('clean:dist', 'css', 'js'));
+gulp.task('build', gulp.series('clean:site', 'css', 'js', jekyllBuild));
 
 // Default
 

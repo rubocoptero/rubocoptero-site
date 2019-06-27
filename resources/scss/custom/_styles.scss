@@ -27,6 +27,7 @@
 // Navbar
 
 .navbar-transparent {
+  @extend .navbar-dark;
   background-color: transparent;
 }
 
