@@ -40,9 +40,9 @@
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.thumb %}
-    <meta property="og:image" content="{{ page.thumb | absolute_url }}" />
+    <meta property="og:image" content="https://deploy-preview-2--rubocoptero.netlify.com{{ page.thumb }}" />
   {% else %}
-    <meta property="og:image" content="{{ '/assets/img/rubocoptero/presenting-round-small.png' | absolute_url }}" />
+    <meta property="og:image" content="https://deploy-preview-2--rubocoptero.netlify.com/assets/img/rubocoptero/presenting-round-small.png" />
   {% endif %}
 
   <link rel="canonical" href="{{ page.url | absolute_url }}">
