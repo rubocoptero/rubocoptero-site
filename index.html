@@ -1,101 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <!-- Google Analytics -->
-  <script>
-    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-    ga('create', 'UA-37428382-2', 'auto');
-
-
-    ga('require', 'eventTracker');
-    ga('require', 'outboundLinkTracker');
-    ga('require', 'maxScrollTracker');
-
-    ga('send', 'pageview');
-  </script>
-  <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-  <script async="" src="./landing/vendor/google/autotrack.custom.js"></script>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Ayudo a equipos de desarrollo a mantener una velocidad sostenible de manera indefinida.">
-  <meta name="author" content="Rubén Antón">
-  <title>Rubocoptero</title>
-  <link rel="canonical" href="https://www.rubocoptero.com">
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
-  <!-- Font Awesome 5 -->
-  <link rel="stylesheet" href="../../assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
-  <!-- Page CSS -->
-  <link rel="stylesheet" href="../../assets/libs/sweetalert2/dist/sweetalert2.min.css">
-  <!-- Purpose CSS -->
-  <link rel="stylesheet" href="../../assets/css/purpose.css" id="stylesheet">
-</head>
-
-<body data-spy="scroll" data-target="#navbar" data-offset="0">
-  <header class="header" id="header-main">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent" style="position: fixed;
-    z-index: 1030;" id="navbar">
-      <div class="container">
-        <a class="navbar-brand scroll-me" href="#header">
-          <img src="../../assets/img/favicon/apple-touch-icon.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-          ubocoptero
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup, #navbarSocial" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link scroll-me" href="#services">Servicios</a>
-            <a class="nav-item nav-link scroll-me" href="#events">Eventos</a>
-            <a class="nav-item nav-link scroll-me" href="#bio">Sobre mí</a>
-          </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSocial">
-            
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="mailto:ruben@rubocoptero.com">
-                        <i class="fas fa-envelope"></i>
-                        <span class="nav-link-inner--text d-lg-none">Email</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://twitter.com/rubocoptero" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                        <span class="nav-link-inner--text d-lg-none">Twitter</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://www.linkedin.com/in/rubocoptero/" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                        <span class="nav-link-inner--text d-lg-none">LinkedIn</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://github.com/rubocoptero" target="_blank">
-                        <i class="fab fa-github"></i>
-                        <span class="nav-link-inner--text d-lg-none">Github</span>
-                    </a>
-                </li>
-                <li class="nav-item mr-0">
-                  <a href="#contact" class="nav-link d-lg-none scroll-me">¿Hablamos?</a>
-                  <a href="#contact" class="btn btn-sm btn-primary btn-icon rounded-pill d-none d-lg-inline-flex scroll-me">
-                    <span class="btn-inner--icon"><i class="far fa-comments"></i></span>
-                    <span class="btn-inner--text">
-                    ¿Hablamos?</span>
-                  </a>
-                </li>
-            </ul>
-            
-        </div>
-      </div>
-    </nav>
-  </header>
-  <div class="main-content">
+---
+layout: default
+---
     <!-- Header (v13) -->
     <section class="slice slice-xl bg-cover bg-size--cover pb-300" data-offset-top="#header-main" style="background-image: url('../../assets/img/rubocoptero/workshop-compressed.jpeg'); background-position-x: center;" id="header">
       <span class="mask bg-dark opacity-8"></span>
@@ -109,8 +14,7 @@
                 <div class="col-lg-6">
                   <p class="lead text-white lh-180">El coste de añadir funcionalidades no tiene por qué dispararse a medida que el producto crece</p>
                   <div class="mt-5">
-                    <a href="#contact" class="btn btn-lg btn-white rounded-pill scroll-me">¿Hablamos?</a>
-                    <!-- <a href="#" class="btn btn-lg btn-link text-light">Learn more</a> -->
+                    <a href="#contact" class="btn btn-lg btn-white rounded-pill scroll-me" ga-on="click" ga-event-category="Contact" ga-event-action="goto">¿Hablamos?</a>
                   </div>
                 </div>
               </div>
@@ -121,7 +25,7 @@
     </section>
 
 
-
+    <!-- Propuestas de valor -->
     <section class="slice slice-lg py-lg-0">
       <div class="container">
         <div class="card-group flex-column flex-lg-row">
@@ -157,10 +61,7 @@
 
 
 
-    
-
-
-    <!-- <section class="slice slice-lg">
+    <section class="slice slice-lg pt-lg-7">
       <div class="container">
         <div class="row row-grid justify-content-around align-items-center">
           <div class="col-lg-5">
@@ -168,19 +69,61 @@
               <span class="badge badge-soft-primary">
                 Última ponencia
               </span>
-              <h5 class="h3 mt-2">¿La deuda técnica te frena?</h5>
-              <p class="lead mt-4 mb-5">Cada vez cuesta más añadir funcionalidades; y cuando ocurre no causa más que problemas en partes no relacionadas del código.</p><a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" class="link link-underline-primary">Play</a>
+              <h5 class="h3 mt-2"><a href="{% link _posts/2019-07-08-como-ser-agil-sin-enterrarse-en-deuda-tecnica.html %}">¿La deuda técnica te frena?</a></h5>
+              <p class="lead mt-4 mb-5">Descubre las prácticas técnicas que aceleran el desarrollo y lo hacen predecible.</p><a href="{% link _posts/2019-07-08-como-ser-agil-sin-enterrarse-en-deuda-tecnica.html %}" class="link link-underline-primary">Ver</a>
             </div>
           </div>
           <div class="col-lg-6">
-            <img alt="Image placeholder" src="assets/img/rubocoptero/technical_debt.png" class="img-fluid img-center">
+            <img alt="Efecto de la deuda técnica" src="{{ '/assets/img/posts/technical_debt.png' | relative_url }}" class="img-fluid img-center">
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
+
+    <!-- Bio -->
+    <section class="slice slice-lg bg-dark bg-cover bg-size--cover" style="background-image: url('assets/img/rubocoptero/joseph-barrientos-compressed.jpeg'); background-position: center;" id="bio">
+      <span class="mask bg-dark opacity-9"></span>
+      <div class="container">
+        <div class="row row-grid d-flex align-items-center">
+          <div class="col-lg-6">
+            <h4 class="text-white mb-4">Sobre Rubo</h4>
+            <p class="lead text-white lh-180 mb-4">
+              Agile, Extreme Programming y Lean son la mejor forma que conozco de desarrollar productos software.
+            </p>
+            <p class="lead text-white lh-180 mb-4">
+              Comencé mi carrera como programador persiguiendo la excelencia técnica. Llegado un punto, me di cuenta que estaba alcanzando un máximo local. Por ello, decidí adquirir una visión holística: profundizando en el factor humano, la disciplina de producto, la perspectiva de negocio y la gestión del proceso de desarrollo.
+            </p>
+            <p class="lead text-white lh-180 mb-4">
+              Tras cumplir mi sueño de trabajar en San Francisco, tomé consciencia del impacto que puedo tener dentro de una organización.
+            </p>
+            <p class="lead text-white lh-180 mb-4">
+              Fundé la comunidad Software Crafters Alicante en 2016 donde sigo compartiendo mi experiencia.
+            </p>
+          </div>
+          <div class="col-lg-5 ml-auto">
+            <img alt="Image placeholder" src="assets/img/rubocoptero/si-2-compressed.jpeg" class="img-fluid rounded shadow-lg hover-scale-110">
+            <ul class="nav justify-content-center mt-4">
+              <li class="nav-item">
+                <a class="nav-link h3 px-4" href="https://www.linkedin.com/in/rubocoptero/
+" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link h3 px-4" href="https://twitter.com/rubocoptero" target="_blank"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link h3 px-4" href="https://github.com/rubocoptero" target="_blank"><i class="fab fa-github"></i></a>
+              </li>
+              <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="{{ site.email }}">
+                <a class="nav-link h3 px-4" href="mailto:ruben@rubocoptero.com"><i class="fas fa-envelope"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Servicios -->
-    <section class="slice slice-lg pt-lg-7" id="services">
+    <section class="slice slice-lg" id="services">
       <div class="container">
         <div class="mb-5 text-center">
           <span class="badge badge-soft-success badge-pill badge-lg">
@@ -203,7 +146,7 @@
               </p>
             </div>
             <div class="card-footer px-0 py-0 border-0 overflow-hidden">
-              <a href="#contact" class="btn btn-block btn-primary rounded-0 scroll-me" id="evaluation-cta">Cuéntame más</a>
+              <a href="#contact" class="btn btn-block btn-primary rounded-0 scroll-me" id="evaluation-cta" ga-on="click" ga-event-category="Services - Evaluation" ga-event-action="more">Cuéntame más</a>
             </div>
           </div>
           <div class="card hover-shadow-lg">
@@ -215,7 +158,7 @@
               <p class="">Buscáis alguien con experiencia de campo que os ayude a interiorizar los conceptos y técnicas que facilitarán vuestro día a día.</p>
             </div>
             <div class="card-footer px-0 py-0 border-0 overflow-hidden">
-              <a href="#contact" class="btn btn-block btn-primary rounded-0 scroll-me" id="training-cta">Cuéntame más</a>
+              <a href="#contact" class="btn btn-block btn-primary rounded-0 scroll-me" id="training-cta" ga-on="click" ga-event-category="Services - Training" ga-event-action="more">Cuéntame más</a>
             </div>
           </div>
           <div class="card hover-shadow-lg">
@@ -227,7 +170,7 @@
               <p class="">Necesitáis alguien que se siente a programar con vosotros para aplicar lo aprendido sobre vuestro entorno de producción.</p>
             </div>
             <div class="card-footer px-0 py-0 border-0 overflow-hidden">
-              <a href="#contact" class="btn btn-block btn-primary rounded-0 scroll-me" id="coaching-cta">Cuéntame más</a>
+              <a href="#contact" class="btn btn-block btn-primary rounded-0 scroll-me" id="coaching-cta" ga-on="click" ga-event-category="Services - Coaching" ga-event-action="more">Cuéntame más</a>
             </div>
           </div>
         </div>
@@ -279,47 +222,7 @@
       </div>
     </section>
 
-    <!-- Bio -->
-    <section class="slice slice-lg bg-dark bg-cover bg-size--cover" style="background-image: url('assets/img/rubocoptero/joseph-barrientos-compressed.jpeg'); background-position: center;" id="bio">
-      <span class="mask bg-dark opacity-9"></span>
-      <div class="container">
-        <div class="row row-grid d-flex align-items-center">
-          <div class="col-lg-6">
-            <h4 class="text-white mb-4">Sobre Rubo</h4>
-            <p class="lead text-white lh-180 mb-4">
-              Agile, Extreme Programming y Lean son la mejor forma que conozco de desarrollar productos software.
-            </p>
-            <p class="lead text-white lh-180 mb-4">
-              Comencé mi carrera como programador persiguiendo la excelencia técnica. Llegado un punto, me di cuenta que estaba alcanzando un máximo local. Por ello, decidí adquirir una visión holística: profundizando en el factor humano, la disciplina de producto, la perspectiva de negocio y la gestión del proceso de desarrollo.
-            </p>
-            <p class="lead text-white lh-180 mb-4">
-              Tras cumplir mi sueño de trabajar en San Francisco, tomé consciencia del impacto que puedo tener dentro de una organización.
-            </p>
-            <p class="lead text-white lh-180 mb-4">
-              Fundé la comunidad Software Crafters Alicante en 2016 donde sigo compartiendo mi experiencia.
-            </p>
-          </div>
-          <div class="col-lg-5 ml-auto">
-            <img alt="Image placeholder" src="assets/img/rubocoptero/si-2-compressed.jpeg" class="img-fluid rounded shadow-lg hover-scale-110">
-            <ul class="nav justify-content-center mt-4">
-              <li class="nav-item">
-                <a class="nav-link h3 px-4" href="https://www.linkedin.com/in/rubocoptero/
-" target="_blank"><i class="fab fa-linkedin"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link h3 px-4" href="https://twitter.com/rubocoptero" target="_blank"><i class="fab fa-twitter"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link h3 px-4" href="https://github.com/rubocoptero" target="_blank"><i class="fab fa-github"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link h3 px-4" href="mailto:ruben@rubocoptero.com"><i class="fas fa-envelope"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>   
+    
 
 
     <!-- Contact -->
@@ -358,78 +261,3 @@
         </div>
       </div>
     </section>
-
-
-    <!-- <section class="slice slice-lg">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="card bg-gradient-primary rounded shadow-lg border-0 text-center position-relative zindex-100">
-              <div class="card-body p-5">
-                <h3 class="text-white font-weight-400">¿Tu velocidad de desarrollo es demasiado lenta?</h3>
-                <p class="text-white">Aprende a convertir tu código en fácilmente mantenible de manera segura</p>
-                <div class="mt-4">
-                  <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" class="btn btn-white btn-icon rounded-pill px-4">
-                    <span class="btn-inner--icon"><i class="fas fa-shopping-cart"></i></span>
-                    <span class="btn-inner--text">Toma el control</span>
-                  </a>
-                  <a href="../../docs/index.html" class="btn btn-link text-white">Read the Docs</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-
-
-  </div>
-  <footer class="footer p-0 footer-dark bg-gradient-dark" id="footer-main">
-    <div class="container">
-      <div class="py-4">
-        <div class="row align-items-md-center align-items-center">
-          <div class="col-sm-6">
-            <div class="d-flex align-items-center justify-content-center justify-content-sm-start">
-              <p class="text-sm mb-0">Copyright © 2018, Rubocoptero</p>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <ul class="nav justify-content-center justify-content-sm-end mt-3 mt-sm-0">
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.linkedin.com/in/rubocoptero/" target="_blank">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://twitter.com/rubocoptero" target="_blank">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/rubocoptero" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="mailto:ruben@rubocoptero.com">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
-  <script src="../../assets/js/purpose.core.js"></script>
-  <!-- Page JS -->
-  <script src="../../assets/libs/sweetalert2/dist/sweetalert2.min.js"></script>
-  <!-- Purpose JS -->
-  <script src="../../assets/js/purpose.js"></script>
-  <!-- Custom JS -->
-  <script src="../../assets/js/main.js"></script>  
-</body>
-
-</html>

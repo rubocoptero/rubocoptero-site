@@ -32,6 +32,7 @@ $(document).ready(function () {
         $.post($form.attr("action"), $form.serialize())
         .then(function() {
             showSuccess();
+            sendContactSubmitToAnalytics();
         });
     });
 
@@ -46,13 +47,21 @@ $(document).ready(function () {
         $("#context").val("Acompañamiento");
     });
 
-    function showSuccess(){
+    function showSuccess() {
         Swal.fire({
           titleText: '¡Enviado!',
           text: 'En breve me pondré en contacto contigo.',
           type: 'success',
           confirmButtonText: 'OK',
           confirmButtonColor: '#36b37e'
+        });
+    }
+
+    function sendContactSubmitToAnalytics() {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Contact',
+          eventAction: 'submit'
         });
     }
 });

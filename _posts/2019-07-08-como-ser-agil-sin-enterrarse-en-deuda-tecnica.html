@@ -1,0 +1,144 @@
+---
+layout: default
+title: Cómo ser ágil sin enterrarse en deuda técnica
+description: Usar Scrum al 100% no basta, es necesario complementarlo con unas prácticas técnicas que lo hagan sostenible a largo plazo.
+slug: scrum-agile-sin-deuda-tecnica
+thumb: /assets/img/posts/technical_debt.png
+---
+    <section class="slice slice-lg mt-6" data-offset-top="#header-main">
+      <div class="container pt-6">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h1 class="lh-150 mb-3">{{ page.title }}</h1>
+            <p class="lead text-muted mb-0">Usar Scrum al 100% no basta, es necesario complementarlo con unas prácticas técnicas que lo hagan sostenible a largo plazo.</p>
+            <div class="media align-items-center mt-5">
+              <div>
+                <a href="#" class="avatar rounded-circle mr-3">
+                  <img alt="Image placeholder" src="{{ '/assets/img/rubocoptero/presenting-round-very-small.png' | relative_url }}">
+                </a>
+              </div>
+              <div class="media-body">
+                <span class="d-block h6 mb-0">Rubén Antón</span>
+                <span class="text-sm text-muted">8 Julio 2019</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slice">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <!-- Article body -->
+            <article>
+              <p class="lead">Esta es una ponencia que di en la Semana Informática 2019 organizada por el Colegio Oficial de Ingeniería Informática de la Comunitat Valenciana. La exposición iba acompañada de una comunicación escrita que sintetiza las  principales ideas desgranadas en la misma, puedes encontrarla <a class="scroll-me" href="#comunicacion">más abajo.</a></p>
+              <div class="embed-responsive embed-responsive-16by9 mt-5 mb-3">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-SYsSSrZnxo?rel=0" allowfullscreen></iframe>
+              </div>
+
+              <div class="accordion accordion-stacked my-3" id="comunicacion">
+    
+                <!-- Accordion card 1 -->
+                <div class="card">
+                  <div class="card-header py-4" id="heading-1-1" data-toggle="collapse" role="button" data-target="#collapse-1-1" aria-expanded="false" aria-controls="collapse-1-1">
+                      <h6 class="mb-0"><i class="far fa-file-pdf mr-3"></i>Ver transparencias</h6>
+                  </div>
+                  <div id="collapse-1-1" class="collapse" aria-labelledby="heading-1-1" data-parent="#comunicacion">
+                    <div class="card-body">
+                      <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive-item" src="https://www.slideshare.net/slideshow/embed_code/key/aUQAUivu1zvLpD?startSlide=2" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>                
+              </div>
+              <h4>Comunicación</h4>
+              <p class="lead">La agilidad está en auge. Siendo Scrum la metodología de elección para la mayoría de organizaciones que buscan sumarse a la transformación. Pero pocos son los que leen la letra pequeña: Scrum evita deliberadamente recomendar unas prácticas técnicas que hagan sostenible la entrega de valor en los ciclos cortos que propone. Delega dicha responsabilidad en el equipo, que, desconociéndola, suele pasarla por alto.</p>
+              <p class="lead">Así, el equipo se entierra poco a poco en deuda técnica. Conforme pasa el tiempo, cada vez es más costoso añadir nuevas funcionalidades. Con cada cambio, surgen defectos en partes que antes funcionaban correctamente. Lo que conduce a un ambiente enrarecido, rotaciones de personal y re-escrituras que siguen el mismo desenlace.</p>
+              <figure class="figure d-block text-center">
+                <img alt="Efecto de la deuda técnica" src="{{ '/assets/img/posts/technical_debt.png' | relative_url }}" class="img-fluid rounded figure-img">
+                <figcaption class="figure-caption text-muted text-center">Efecto de la deuda técnica<a href="http://i2.wp.com/commadot.com/wp-content/uploads/2011/02/techDebt1.png"class="small mx-1" target="_blank" rel="external"><i class="fas fa-link"></i></a></figcaption>
+              </figure>
+              <p class="lead">Afortunadamente, existe un tratamiento: unas prácticas que permiten desarrollar software de manera iterativa e incremental. Manteniéndolo bien testeado, bien diseñado, enfocado en la funcionalidad y listo para ser desplegado en cualquier momento.</p>
+              <h5>Testing automatizado</h5>
+              <p class="lead">El primer paso es el testing, piedra angular que permitirá evolucionar el diseño del sistema adaptándolo a los cambiantes "requisitos". Por ello, se hace necesario asegurar el valor entregado por medio de una <b>suite de regresión automatizada</b>. Dado que es inaceptable que la adición de nuevas funcionalidades rompa las antiguas.</p>
+              <p class="lead">Cada historia de usuario debería ir acompañada de unos criterios de aceptación. Ejemplos concretos y ejecutables acordados tras una conversación entre negocio y desarrollo. Posteriormente, una vez automatizados, se convierten en <b>test de aceptación</b>.</p>
+
+              <figure class="figure d-block text-center">
+                <img alt="Pirámides de test" src="{{ '/assets/img/posts/AgileTestingPyramid2.jpg' | relative_url }}" class="img-fluid rounded figure-img">
+                <figcaption class="figure-caption text-muted text-center">Comparación pirámide de test <a href="https://www.agilecoachjournal.com/wp-content/uploads/2014/01/AgileTestingPyramid2.jpg"class="small mx-1" target="_blank" rel="external"><i class="fas fa-link"></i></a></figcaption>
+              </figure>
+
+              <p class="lead">A su vez, los programadores, a medida que desarrollan, los complementan con <b>test unitarios, de integración y de contrato</b>. Estos sostienen la arquitectura y protegen la valiosa lógica de negocio. El objetivo es perder el miedo a realizar cambios en el código existente.</p>
+
+              <h5>Diseño incremental</h5>
+              <p class="lead">Por otro lado, el diseño deja de ser una fase, como pasaba en el modelo en cascada, para convertirse en una actividad. Se invierte en él cada día ajustándolo a las necesidades actuales del sistema.</p>
+              <figure class="figure d-block text-center">
+                <img alt="Diseño ágil" src="{{ '/assets/img/posts/agile vs waterfall.JPG' | relative_url }}" class="img-fluid rounded figure-img">
+                <figcaption class="figure-caption text-muted text-center">Diseño en un contexto ágil <a href="http://3.bp.blogspot.com/_s0xJIGrbtjQ/SWNwAADda9I/AAAAAAAAAA8/oqJyRlzMVmU/s1600-h/agile+vs+waterfall.JPG"class="small mx-1" target="_blank" rel="external"><i class="fas fa-link"></i></a></figcaption>
+              </figure>
+              <p class="lead">Para ello se hace uso de técnicas de <b>refactoring</b>: modificaciones en el diseño del código existente que no cambian el comportamiento observable del mismo. Pequeños cambios que mantendrán el sistema funcionando correctamente y reducirán el coste que supone modificarlo.</p>
+              <p class="lead">Existen dos momentos clave para refactorizar. Uno, antes de añadir una funcionalidad: al observar que esta será difícil de absorber por el sistema, se buscará facilitar su introducción. Otro, después de añadirla: si el diseño se resiente, se aliviarán las posibles tensiones que haya provocado.</p>
+              <h5>Integración y Entrega Continua</h5>
+              <p class="lead">Finalmente, sólo queda por recorrer la última milla: integrar el nuevo incremento en el producto, asegurando que todo sigue funcionando correctamente, y entregarlo al usuario final. Puesto que esto ocurrirá al menos una vez cada iteración, deja de ser viable hacerlo de una forma manual.</p>
+              <figure class="figure d-block text-center">
+                <img alt="Última milla" src="{{ '/assets/img/posts/last mile.png' | relative_url }}" class="img-fluid rounded figure-img">
+                <figcaption class="figure-caption text-muted text-center">La "última milla"<a href="https://raw.githubusercontent.com/domingogallardo/apuntes-mads/master/sesiones/08-integracion-entrega-continua/diapositivas/integracion-entrega-continua.004.png" class="small mx-1" target="_blank" rel="external"><i class="fas fa-link"></i></a></figcaption>
+              </figure>
+              <p class="lead">La <b>integración continua</b> permite mantener el sistema listo para ser desplegado en cualquier momento. Al contrario de lo que muchos piensan, no se trata de una herramienta, si no de una actitud. Consiste en integrar varias veces al día. Ya que cuanto más se tarde en hacerlo, más costará y más impredecible será su coste.</p>
+              <p class="lead">Cada vez que un desarrollador integre un cambio, se desencadenará el proceso de build. Automáticamente se construirá el sistema al completo y se correrán todos los test en 10 minutos o menos. La restricción temporal es clave, puesto que si se tardase más, se integraría mucho menos a menudo. Para terminar, se desplegará en un entorno similar al de producción. Disminuyendo así el riesgo y convirtiendo en algo trivial la consecución de una <b>entrega continua</b>.</p>
+              <figure class="figure d-block text-center">
+                <img alt="Integración Continua" src="{{ '/assets/img/posts/integracion-entrega-continua_016_png__1440×900_.png' | relative_url }}" class="img-fluid rounded figure-img">
+                <figcaption class="figure-caption text-muted text-center">Integración Continua<a href="https://github.com/domingogallardo/apuntes-mads/blob/master/sesiones/08-integracion-entrega-continua/diapositivas/integracion-entrega-continua.016.png"class="small mx-1" target="_blank" rel="external"><i class="fas fa-link"></i></a></figcaption>
+              </figure>
+              <p class="lead">En definitiva, estas cuatro prácticas representan el santo grial del desarrollo iterativo. Lo más importante es que se refuerzan entre sí. El diseño incremental se apoya en el testing automatizado; la integración continua nos da la confianza de que los cambios están listos para ser entregados; y junto con la entrega continua está garantizado que vamos a ser capaces de desplegar muy a menudo, de manera rápida y segura.</p>
+              <p class="lead">Como resultado, recuperaremos la confianza de negocio. Dejaremos de suponer un cuello de botella y seremos capaces de mantener una velocidad sostenible de manera indefinida.</p>
+
+              <h5>Recursos de interés</h5>
+              <p class="lead">Puesto que el tiempo era limitado y el público objetivo muy amplio no pude entrar tan en detalle como me gustaría. Las ideas expuestas están fuertemente influenciadas por <a href="https://ronjeffries.com/xprog/what-is-extreme-programming/" target="_blank" rel="external">Extreme Programming (XP)</a> y <a href="https://continuousdelivery.com" target="_blank" rel="external">Continuous Delivery  (CD)</a>. A continuación dejo algunos enlaces por si quieres profundizar en alguna de las prácticas:</p>
+              <ul class="lead">
+                <li><a href="https://martinfowler.com/articles/practical-test-pyramid.html" target="_blank" rel="external">The Practical Test Pyramid</a></li>
+                <li><a href="https://www.jamesshore.com/Agile-Book/incremental_design.html" target="_blank" rel="external">Incremental Design and Architecture</a></li>
+                <li><a href="https://www.youtube.com/watch?v=72QcYs-2oss" target="_blank" rel="external">The Principles of Evolutionary Architecture</a></li>
+                <li><a href="https://github.com/domingogallardo/apuntes-mads/blob/master/sesiones/08-integracion-entrega-continua/integracion-entrega-continua.md" target="_blank" rel="external">Integración y Entrega Continua</a></li>
+              </ul>
+            </article>
+            <hr>
+            <p class="lead">Si te has quedado con alguna duda, siempre puedes contactarme a través de mi email: <a href="mailto:ruben@rubocoptero.com">ruben@rubocoptero.com</a>.</p>
+            <p class="lead">Como no tengo comentarios en el blog, me encantaría continuar la conversación en <a href="https://twitter.com/rubocoptero">Twitter</a>. ¡Todo feedback es bienvenido! Si crees que hay algo que se puede mejorar me ayudarías muchísimo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <!-- <section class="slice slice-lg">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="card bg-gradient-primary rounded shadow-lg border-0 text-center position-relative zindex-100">
+                <div class="card-body p-5">
+                  <h3 class="text-white font-weight-400">Testear es el primer paso</h3>
+                  <p class="text-white">Aprende como hacerlo de forma práctica y efectiva</p>
+
+                  <form class="mt-4">
+                    <div class="form-group mb-0">
+                      <div class="input-group input-group-lg input-group-merge rounded-pill bg-white">
+                        <input type="email" class="form-control form-control-flush" name="email" placeholder="Enter your email address" aria-label="Enter your email address">
+                        <div class="input-group-append">
+                          <button class="btn btn-light" type="button">
+                            <span class="fas fa-paper-plane"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section> -->
+  

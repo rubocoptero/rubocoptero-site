@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+<head>
+  <!-- Google Analytics -->
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-37428382-2', 'auto');
+
+
+    ga('require', 'eventTracker');
+    ga('require', 'outboundLinkTracker');
+    ga('require', 'maxScrollTracker');
+
+    ga('send', 'pageview');
+  </script>
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script async="" src="{{ '/assets/libs/google/autotrack.custom.js' | relative_url }}"></script>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}">
+  <meta name="author" content="Rubén Antón">
+  <title>
+    {% if page.title %}
+      {{ page.title }} | {{ site.title }}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
+
+  <!-- Twitter meta -->
+  <meta name="twitter:site" content="@rubocoptero" />
+  <meta name="twitter:card" content="summary">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.thumb %}
+    <meta property="og:image" content="{{ page.thumb | absolute_url }}" />
+  {% else %}
+    <meta property="og:image" content="{{ '/assets/img/rubocoptero/presenting-round-small.png' | absolute_url }}" />
+  {% endif %}
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/favicon/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon/favicon-16x16.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/img/favicon/site.webmanifest' | relative_url }}">
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="{{ '/assets/libs/@fortawesome/fontawesome-free/css/all.min.css' | relative_url }}">
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="{{ '/assets/libs/sweetalert2/dist/sweetalert2.min.css' | relative_url }}">
+  <!-- Purpose CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/purpose.css' | relative_url }}" id="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
+  <header class="header" id="header-main">
+    <nav class="navbar navbar-expand-lg fixed-top {% if page.url == "/" %} navbar-transparent {% else %} navbar-white {% endif %}" style="position: fixed;
+    z-index: 1030;" id="navbar">
+      <div class="container">
+        <a class="navbar-brand scroll-me" href="{{ '#header' | relative_url }}">
+          <img src="{{ '/assets/img/favicon/apple-touch-icon.png' | relative_url }}" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+          ubocoptero
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup, #navbarSocial" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link scroll-me" href="{{ '#services' | relative_url }}">Servicios</a>
+            <a class="nav-item nav-link scroll-me" href="{{ '#events' | relative_url }}">Eventos</a>
+            <a class="nav-item nav-link scroll-me" href="{{ '#bio' | relative_url }}">Sobre mí</a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSocial">
+            
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" data-toggle="tooltip" data-placement="left" title="{{ site.email }}">
+                    <a class="nav-link nav-link-icon" href="mailto:ruben@rubocoptero.com">
+                        <i class="fas fa-envelope"></i>
+                        <span class="nav-link-inner--text d-lg-none">Email</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="https://twitter.com/rubocoptero" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        <span class="nav-link-inner--text d-lg-none">Twitter</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="https://www.linkedin.com/in/rubocoptero/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="nav-link-inner--text d-lg-none">LinkedIn</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="https://github.com/rubocoptero" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span class="nav-link-inner--text d-lg-none">Github</span>
+                    </a>
+                </li>
+                <li class="nav-item mr-0">
+                  <a href="{{ '#contact' | relative_url }}" class="nav-link d-lg-none scroll-me text-primary" ga-on="click" ga-event-category="Contact" ga-event-action="goto">¿Hablamos?</a>
+                  <a href="{{ '#contact' | relative_url }}" class="btn btn-sm btn-primary btn-icon rounded-pill d-none d-lg-inline-flex scroll-me" ga-on="click" ga-event-category="Contact" ga-event-action="goto">
+                    <span class="btn-inner--icon"><i class="far fa-comments"></i></span>
+                    <span class="btn-inner--text">
+                    ¿Hablamos?</span>
+                  </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="main-content">
+    {{ content }}
+  </div>
+
+  {% include footer.html %}
+  <!-- <footer class="footer p-0 footer-dark bg-gradient-dark" id="footer-main">
+    <div class="container">
+      <div class="py-4">
+        <div class="row align-items-md-center align-items-center">
+          <div class="col-sm-6">
+            <div class="d-flex align-items-center justify-content-center justify-content-sm-start">
+              <p class="text-sm mb-0">Copyright © 2018, Rubocoptero</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <ul class="nav justify-content-center justify-content-sm-end mt-3 mt-sm-0">
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/rubocoptero/" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://twitter.com/rubocoptero" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/rubocoptero" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mailto:ruben@rubocoptero.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="{{ '/assets/js/purpose.core.js' | relative_url }}"></script>
+  <!-- Page JS -->
+  <script src="{{ '/assets/libs/sweetalert2/dist/sweetalert2.min.js' | relative_url }}"></script>
+  <!-- Purpose JS -->
+  <script src="{{ '/assets/js/purpose.js' | relative_url }}"></script>
+  <!-- Custom JS -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+
+</html>

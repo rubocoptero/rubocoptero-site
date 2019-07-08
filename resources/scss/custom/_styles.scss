@@ -26,7 +26,13 @@
 
 // Navbar
 
+.navbar-white {
+  @extend .navbar-light;
+  background: $white;
+}
+
 .navbar-transparent {
+  @extend .navbar-dark;
   background-color: transparent;
 }
 
