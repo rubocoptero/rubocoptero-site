@@ -5707,49 +5707,61 @@ input[type='button'].btn-block
 }
 
 .navbar-light .navbar-brand,
+.navbar-white .navbar-brand,
 nav.scrolled .navbar-brand
 {
     color: rgba(31, 45, 61, .9);
 }
 .navbar-light .navbar-brand:hover,
+.navbar-white .navbar-brand:hover,
 nav.scrolled .navbar-brand:hover,
 .navbar-light .navbar-brand:focus,
+.navbar-white .navbar-brand:focus,
 nav.scrolled .navbar-brand:focus
 {
     color: rgba(31, 45, 61, .9);
 }
 
 .navbar-light .navbar-nav .nav-link,
+.navbar-white .navbar-nav .nav-link,
 nav.scrolled .navbar-nav .nav-link
 {
     color: rgba(31, 45, 61, .5);
 }
 .navbar-light .navbar-nav .nav-link:hover,
+.navbar-white .navbar-nav .nav-link:hover,
 nav.scrolled .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus,
+.navbar-white .navbar-nav .nav-link:focus,
 nav.scrolled .navbar-nav .nav-link:focus
 {
     color: rgba(31, 45, 61, .7);
 }
 .navbar-light .navbar-nav .nav-link.disabled,
+.navbar-white .navbar-nav .nav-link.disabled,
 nav.scrolled .navbar-nav .nav-link.disabled
 {
     color: rgba(31, 45, 61, .3);
 }
 
 .navbar-light .navbar-nav .show > .nav-link,
+.navbar-white .navbar-nav .show > .nav-link,
 nav.scrolled .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .active > .nav-link,
+.navbar-white .navbar-nav .active > .nav-link,
 nav.scrolled .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
+.navbar-white .navbar-nav .nav-link.show,
 nav.scrolled .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active,
+.navbar-white .navbar-nav .nav-link.active,
 nav.scrolled .navbar-nav .nav-link.active
 {
     color: rgba(31, 45, 61, .9);
 }
 
 .navbar-light .navbar-toggler,
+.navbar-white .navbar-toggler,
 nav.scrolled .navbar-toggler
 {
     color: rgba(31, 45, 61, .5);
@@ -5757,24 +5769,29 @@ nav.scrolled .navbar-toggler
 }
 
 .navbar-light .navbar-toggler-icon,
+.navbar-white .navbar-toggler-icon,
 nav.scrolled .navbar-toggler-icon
 {
     background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath stroke=\'rgba(31, 45, 61, 0.5)\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' d=\'M4 7h22M4 15h22M4 23h22\'/%3E%3C/svg%3E');
 }
 
 .navbar-light .navbar-text,
+.navbar-white .navbar-text,
 nav.scrolled .navbar-text
 {
     color: rgba(31, 45, 61, .5);
 }
 .navbar-light .navbar-text a,
+.navbar-white .navbar-text a,
 nav.scrolled .navbar-text a
 {
     color: rgba(31, 45, 61, .9);
 }
 .navbar-light .navbar-text a:hover,
+.navbar-white .navbar-text a:hover,
 nav.scrolled .navbar-text a:hover,
 .navbar-light .navbar-text a:focus,
+.navbar-white .navbar-text a:focus,
 nav.scrolled .navbar-text a:focus
 {
     color: rgba(31, 45, 61, .9);
@@ -22784,6 +22801,7 @@ textarea[resize='horizontal']
 }
 
 .border-bottom.navbar-light,
+.border-bottom.navbar-white,
 nav.border-bottom.scrolled
 {
     border-color: rgba(31, 45, 61, .04) !important;
@@ -23240,6 +23258,7 @@ nav.border-bottom.scrolled
     box-shadow: none !important;
 }
 .navbar-vertical.navbar-light,
+.navbar-vertical.navbar-white,
 nav.navbar-vertical.scrolled
 {
     border-color: #2c4056; 
@@ -30595,6 +30614,11 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
 {
     font-size: 1.4rem;
     font-weight: 600;
+}
+
+.navbar-white
+{
+    background: #fff;
 }
 
 .navbar-transparent

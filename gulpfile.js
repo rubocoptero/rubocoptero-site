@@ -107,6 +107,7 @@ gulp.task('minify:css', function(done) {
 gulp.task('clean:js', function(done) {
 	return del([
         paths.dist.js + '/**/*.js',
+        '!' + paths.dist.js + '/main.js',
         '!' + paths.dist.js + '/docs.js'
     ]);
     done();
@@ -154,7 +155,8 @@ gulp.task('concat:js', function(done) {
 	done();
 });
 
-// Minify js
+// Minify JS
+
 gulp.task('minify:js', function(done) {
 	return gulp.src(paths.dist.js + '/purpose.js')
 		.pipe(plumber())
@@ -165,6 +167,16 @@ gulp.task('minify:js', function(done) {
 		}))
     .pipe(gulp.dest(paths.site.js))
 		.pipe(gulp.dest(paths.dist.js))
+    done();
+});
+
+// Copy JS
+
+gulp.task('copy:js', function(done) {
+  return gulp.src([
+      paths.src.js + '/main.js'
+    ])
+    .pipe(gulp.dest(paths.site.js))
     done();
 });
 
@@ -227,6 +239,7 @@ function browserSyncReload(done) {
 function watchFiles() {
     gulp.watch(paths.src.resources + '/scss/**/*.scss', gulp.series('compile:scss'));
     gulp.watch(paths.src.resources + '/js/**/*.js', gulp.series('concat:js'));
+    gulp.watch(paths.src.js + '/main.js', gulp.series('copy:js', browserSyncReload));
     gulp.watch(
       paths.src.html, 
       gulp.series(jekyllBuild, browserSyncReload)
@@ -235,7 +248,7 @@ function watchFiles() {
 
 // Bundled tasks
 
-gulp.task('js', gulp.series('clean:js', 'concat:js-core', 'concat:js', 'minify:js'));
+gulp.task('js', gulp.series('clean:js', 'concat:js-core', 'concat:js', 'minify:js', 'copy:js'));
 gulp.task('css', gulp.series('clean:css', 'compile:scss', 'minify:css'));
 gulp.task('browserSync', gulp.series(browserSyncServe, watchFiles));
 
@@ -245,14 +258,14 @@ function jekyllBuild() {
   return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
 }
 
-// Serve
-
-gulp.task('serve', gulp.parallel(jekyllBuild, browserSyncServe, watchFiles))
-
 // Build
 
 gulp.task('build', gulp.series('clean:site', 'css', 'js', jekyllBuild));
 
+// Serve
+
+gulp.task('serve', gulp.parallel('build', 'browserSync'))
+
 // Default
 
-gulp.task('default', gulp.series('compile:scss', 'browserSync'));
+gulp.task('default', gulp.series('serve'));

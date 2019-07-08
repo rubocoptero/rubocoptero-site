@@ -21,27 +21,27 @@
   <meta name="description" content="Ayudo a equipos de desarrollo a mantener una velocidad sostenible de manera indefinida.">
   <meta name="author" content="Rubén Antón">
   <title>Rubocoptero</title>
-  <link rel="canonical" href="https://www.rubocoptero.com">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/favicon/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon/favicon-16x16.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/img/favicon/site.webmanifest' | relative_url }}">
   <!-- Font Awesome 5 -->
-  <link rel="stylesheet" href="../../assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/libs/@fortawesome/fontawesome-free/css/all.min.css' | relative_url }}">
   <!-- Page CSS -->
-  <link rel="stylesheet" href="../../assets/libs/sweetalert2/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="{{ '/assets/libs/sweetalert2/dist/sweetalert2.min.css' | relative_url }}">
   <!-- Purpose CSS -->
-  <link rel="stylesheet" href="../../assets/css/purpose.css" id="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/purpose.css' | relative_url }}" id="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
   <header class="header" id="header-main">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent" style="position: fixed;
+    <nav class="navbar navbar-expand-lg fixed-top {% if page.url == "/" %} navbar-transparent {% else %} navbar-white {% endif %}" style="position: fixed;
     z-index: 1030;" id="navbar">
       <div class="container">
-        <a class="navbar-brand scroll-me" href="#header">
-          <img src="../../assets/img/favicon/apple-touch-icon.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+        <a class="navbar-brand scroll-me" href="{{ '#header' | relative_url }}">
+          <img src="{{ '/assets/img/favicon/apple-touch-icon.png' | relative_url }}" width="30" height="30" class="d-inline-block align-top" alt="Logo">
           ubocoptero
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup, #navbarSocial" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,9 +49,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link scroll-me" href="#services">Servicios</a>
-            <a class="nav-item nav-link scroll-me" href="#events">Eventos</a>
-            <a class="nav-item nav-link scroll-me" href="#bio">Sobre mí</a>
+            <a class="nav-item nav-link scroll-me" href="{{ '#services' | relative_url }}">Servicios</a>
+            <a class="nav-item nav-link scroll-me" href="{{ '#events' | relative_url }}">Eventos</a>
+            <a class="nav-item nav-link scroll-me" href="{{ '#bio' | relative_url }}">Sobre mí</a>
           </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSocial">
@@ -82,8 +82,8 @@
                     </a>
                 </li>
                 <li class="nav-item mr-0">
-                  <a href="#contact" class="nav-link d-lg-none scroll-me">¿Hablamos?</a>
-                  <a href="#contact" class="btn btn-sm btn-primary btn-icon rounded-pill d-none d-lg-inline-flex scroll-me">
+                  <a href="{{ '#contact' | relative_url }}" class="nav-link d-lg-none scroll-me">¿Hablamos?</a>
+                  <a href="{{ '#contact' | relative_url }}" class="btn btn-sm btn-primary btn-icon rounded-pill d-none d-lg-inline-flex scroll-me">
                     <span class="btn-inner--icon"><i class="far fa-comments"></i></span>
                     <span class="btn-inner--text">
                     ¿Hablamos?</span>
@@ -137,14 +137,15 @@
       </div>
     </div>
   </footer> -->
+
   <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
-  <script src="../../assets/js/purpose.core.js"></script>
+  <script src="{{ '/assets/js/purpose.core.js' | relative_url }}"></script>
   <!-- Page JS -->
-  <script src="../../assets/libs/sweetalert2/dist/sweetalert2.min.js"></script>
+  <script src="{{ '/assets/libs/sweetalert2/dist/sweetalert2.min.js' | relative_url }}"></script>
   <!-- Purpose JS -->
-  <script src="../../assets/js/purpose.js"></script>
+  <script src="{{ '/assets/js/purpose.js' | relative_url }}"></script>
   <!-- Custom JS -->
-  <script src="../../assets/js/main.js"></script>  
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 
 </html>
