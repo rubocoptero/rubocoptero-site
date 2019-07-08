@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" prefix="og: http://ogp.me/ns#">
 <head>
   <!-- Google Analytics -->
   <script>
@@ -27,6 +27,24 @@
       {{ site.title }}
     {% endif %}
   </title>
+
+  <!-- Twitter meta -->
+  <meta name="twitter:site" content="@rubocoptero" />
+  <meta name="twitter:card" content="summary">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.thumb %}
+    <meta property="og:image" content="{{ page.thumb | absolute_url }}" />
+  {% else %}
+    <meta property="og:image" content="{{ '/assets/img/rubocoptero/presenting-round-small.png' | absolute_url }}" />
+  {% endif %}
+
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/favicon/apple-touch-icon.png' | relative_url }}">
