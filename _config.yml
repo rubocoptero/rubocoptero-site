@@ -28,6 +28,7 @@ permalink: /blog/:title:output_ext
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Include for processing.
 include:
@@ -48,3 +49,9 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+defaults:
+  -
+    scope:
+      path:            "assets/libs/*"
+    values:
+      sitemap:         false
