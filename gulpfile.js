@@ -108,6 +108,7 @@ gulp.task('clean:js', function(done) {
 	return del([
         paths.dist.js + '/**/*.js',
         '!' + paths.dist.js + '/main.js',
+        '!' + paths.dist.js + '/analytics.custom.js',
         '!' + paths.dist.js + '/docs.js'
     ]);
     done();
@@ -174,7 +175,8 @@ gulp.task('minify:js', function(done) {
 
 gulp.task('copy:js', function(done) {
   return gulp.src([
-      paths.src.js + '/main.js'
+      paths.src.js + '/main.js',
+      paths.src.js + '/analytics.custom.js'
     ])
     .pipe(gulp.dest(paths.site.js))
     done();
@@ -240,6 +242,7 @@ function watchFiles() {
     gulp.watch(paths.src.resources + '/scss/**/*.scss', gulp.series('compile:scss'));
     gulp.watch(paths.src.resources + '/js/**/*.js', gulp.series('concat:js'));
     gulp.watch(paths.src.js + '/main.js', gulp.series('copy:js', browserSyncReload));
+    gulp.watch(paths.src.js + '/analytics.custom.js', gulp.series('copy:js', browserSyncReload));
     gulp.watch(
       paths.src.html, 
       gulp.series(jekyllBuild, browserSyncReload)
