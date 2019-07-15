@@ -3,15 +3,39 @@
 <head>
   <!-- Google Analytics -->
   <script>
-    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-    ga('create', 'UA-37428382-2', 'auto');
+    if (isProduction()) {
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-37428382-2', 'auto');
 
 
-    ga('require', 'eventTracker');
-    ga('require', 'outboundLinkTracker');
-    ga('require', 'maxScrollTracker');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'maxScrollTracker');
 
-    ga('send', 'pageview');
+      ga('send', 'pageview');
+    }
+
+    function isProduction() {
+      return getDomain(window.location.host) === getDomain('{{site.url}}');
+    }
+
+    function getDomain(url, subdomain) {
+      subdomain = subdomain || false;
+
+      url = url.replace(/(https?:\/\/)?(www.)?/i, '');
+
+      if (!subdomain) {
+        url = url.split('.');
+
+        url = url.slice(url.length - 2).join('.');
+      }
+
+      if (url.indexOf('/') !== -1) {
+          return url.split('/')[0];
+      }
+
+      return url;
+    }
   </script>
   <script async="" src="https://www.google-analytics.com/analytics.js"></script>
   <script async="" src="{{ '/assets/libs/google/autotrack.custom.js' | relative_url }}"></script>
